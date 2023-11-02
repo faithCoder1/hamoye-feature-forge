@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+<body>
+    <main class="container">
+        <h1 class="text-center text-white mb-4">The Ripple Effect of Literacy: Transforming Society through Educational Infrastructure</h1>
+        <p>
+            Literacy is the cornerstone of education and personal development. It is not merely the ability to read and write
+            but a
+            fundamental skill that empowers individuals to access knowledge, communicate effectively, and participate in the
+            socio-economic development of society. Low literacy rates can have profound implications for a society's progress,
+            and
+            it is imperative to understand how various factors, including access to electricity, radio, television, primary and
+            secondary school attendance, and improved sanitation and water, can impact literacy rates and educational
+            infrastructure. we'll explore the problems associated with low literacy rates and the features that can
+            significantly
+            influence literacy and education.
+        </p>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <form method="post" action="{{ url_for('predict_api')}}">
+                    <div class="form-group mb-3">
+                        <label for="Country_name" class="mb-2 fw-bold">Country Name</label>
+                        <select class="form-control"  name="Country_name" id="Country_name">
+                            <option value="Liberia">Liberia</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Congo, Democratic Republic of">Congo, Democratic Republic of</option>
+                            <option value="Swaziland">Swaziland</option>
+                            <option value="Namibia">Namibia</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Malawi">Malawi</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Congo, Republic of">Congo, Republic of</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Guinea">Guinea</option>
+                            <option value="Sierra Leone">Sierra Leone</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Electricity" class="mb-2 fw-bold">Electricity</label>
+                        <input class="form-control" type="number" name="Electricity" id="Electricity" placeholder="" required="required" min="0" max="100">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Radio" class="mb-2 fw-bold">Radio</label>
+                        <input class="form-control" type="number" name="Radio" id="" placeholder="" required="required" min="0" max="100">
+                    </div>
+                    <div class="form-group mb-3 ">
+                        <label for="TV" class="mb-2 fw-bold">TV</label>
+                        <input class="form-control" type="number" name="TV" id="" placeholder="" required="required" min="0" max="100">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Radio_Tv" class="mb-2 fw-bold">Radio and TV</label>
+                        <input class="form-control" type="number" name="Radio_Tv" id="" placeholder="" required="required" min="0" max="100">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="pry_School" class="mb-2 fw-bold">Primary School</label>
+                        <input class="form-control" type="number" name="pry_School" id="" placeholder="" required="required" min="0" max="100">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Sec_School" class="mb-2 fw-bold">Secondary School</label>
+                        <input class="form-control" type="number" name="Sec_School" id="" placeholder="" required="required" min="0" max="100">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Water" class="mb-2 fw-bold">Water </label>
+                        <input class="form-control" type="number" name="Water" id="" placeholder="" required="required" min="0" max="100">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Sanitation" class="mb-2 fw-bold">Sanitation</label>
+                        <input class="form-control" type="number" name="Sanitation" id="" placeholder="" required="required" min="0" max="100">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Predict</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+        <div class="mt-3">
+            <h4>{{ prediction_text }}</h4>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+</html>

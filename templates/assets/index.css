@@ -1,0 +1,33 @@
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    background-color: #009688;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button.btn {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+}
+
+button.btn:hover {
+    background-color: #007772;
+}
+
+/* Style form inputs */
+.form-control {
+    border: 1px solid #ccc;
+}

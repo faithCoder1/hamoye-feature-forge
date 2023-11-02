@@ -1,5 +1,6 @@
 Flask
-pandas
+pandas==1.5.3    
 numpy
 matplotlib
 scikit-learn==1.2.2
+category_encoders
