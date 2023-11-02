@@ -2,6 +2,8 @@ import pickle
 from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import OneHotEncoder
 
 
 app=Flask(__name__)
@@ -34,20 +36,21 @@ def predict_api():
 
     # Create a dictionary to store all input data
     input_data = {
-        'Country name': country_name,
-        'Electricity in household (% of population)': electricity,
-        'Radio in household (% of population)': radio,
-        'Television in household (% of population)': tv,
-        'Radio and/or Television in household (% of population)': radio_tv,
-        'Net primary attendance rate (%)': pry_school,
-        'Net secondary attendance rate (%)': sec_school,
-        'Access to improved water (% of population)': water,
-        'Access to improved sanitation (% of population)': sanitation
+        'Country name': [country_name],
+        'Electricity in household (% of population)': [electricity],
+        'Radio in household (% of population)': [radio],
+        'Television in household (% of population)': [tv],
+        'Radio and/or Television in household (% of population)': [radio_tv],
+        'Net primary attendance rate (%)': [pry_school],
+        'Net secondary attendance rate (%)': [sec_school],
+        'Access to improved water (% of population)': [water],
+        'Access to improved sanitation (% of population)': [sanitation]
     }
 
     # Convert the dictionary to a pandas DataFrame
-    input_df = pd.DataFrame(input_data, index=[0])
-    print(input_df)
+    input_df = pd.DataFrame(input_data)
+    print(input_df.info())
+    
 
     # Make the prediction using the model
     prediction = model.predict(input_df)
