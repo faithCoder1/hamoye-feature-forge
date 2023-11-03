@@ -10,11 +10,22 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.header-block {
+    position: relative;
+    background: linear-gradient(rgba(56, 96, 140, 0.6), rgba(56, 96, 140, 0.6)),
+        url('/static/images/Children-in-the-library-Ripple-Africa.jpg') no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+}
+
 h1 {
-    background-color: #009688;
     color: #fff;
     padding: 10px;
-    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 button.btn {
