@@ -27,11 +27,11 @@
         </p>
 
         <div class="row justify-content-center mt-5">
-            <div class="col-md-6">
-                <form method="post" action="{{ url_for('predict_api')}}">
+            <div class="col-md-9">
+                <form method="post" action="{{ url_for('predict_api')}}" class="row">
                     <div class="form-group mb-3">
-                        <label for="Country_name" class="mb-2 fw-bold">Country Name</label>
-                        <select class="form-control"  name="Country_name" id="Country_name">
+                        <label for="Country_name" class="mb-2 country_name fs-3 fw-bold">Country Name</label>
+                        <select class="form-control" name="Country_name" id="Country_name">
                             <option value="Liberia">Liberia</option>
                             <option value="Burundi">Burundi</option>
                             <option value="Lesotho">Lesotho</option>
@@ -61,37 +61,46 @@
                             <option value="Burkina Faso">Burkina Faso</option>
                         </select>
                     </div>
-                    <div class="form-group mb-3">
-                        <label for="Electricity" class="mb-2 fw-bold">Electricity</label>
-                        <input class="form-control" type="number" name="Electricity" id="Electricity" placeholder="" required="required" min="0" max="100">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="Electricity" class="mb-2 fw-bold">Electricity (%)</label>
+                            <input class="form-control" type="number" name="Electricity" id="Electricity" placeholder="" required="required"
+                                min="0" max="100">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="Radio" class="mb-2 fw-bold">Radio (%)</label>
+                            <input class="form-control" type="number" name="Radio" id="" placeholder="" required="required" min="0" max="100">
+                        </div>
+                        <div class="form-group mb-3 ">
+                            <label for="TV" class="mb-2 fw-bold">TV (%)</label>
+                            <input class="form-control" type="number" name="TV" id="" placeholder="" required="required" min="0" max="100">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="Radio_Tv" class="mb-2 fw-bold">Radio and TV (%)</label>
+                            <input class="form-control" type="number" name="Radio_Tv" id="" placeholder="" required="required" min="0"
+                                max="100">
+                        </div>
                     </div>
-                    <div class="form-group mb-3">
-                        <label for="Radio" class="mb-2 fw-bold">Radio</label>
-                        <input class="form-control" type="number" name="Radio" id="" placeholder="" required="required" min="0" max="100">
-                    </div>
-                    <div class="form-group mb-3 ">
-                        <label for="TV" class="mb-2 fw-bold">TV</label>
-                        <input class="form-control" type="number" name="TV" id="" placeholder="" required="required" min="0" max="100">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="Radio_Tv" class="mb-2 fw-bold">Radio and TV</label>
-                        <input class="form-control" type="number" name="Radio_Tv" id="" placeholder="" required="required" min="0" max="100">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="pry_School" class="mb-2 fw-bold">Primary School</label>
-                        <input class="form-control" type="number" name="pry_School" id="" placeholder="" required="required" min="0" max="100">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="Sec_School" class="mb-2 fw-bold">Secondary School</label>
-                        <input class="form-control" type="number" name="Sec_School" id="" placeholder="" required="required" min="0" max="100">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="Water" class="mb-2 fw-bold">Water </label>
-                        <input class="form-control" type="number" name="Water" id="" placeholder="" required="required" min="0" max="100">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="Sanitation" class="mb-2 fw-bold">Sanitation</label>
-                        <input class="form-control" type="number" name="Sanitation" id="" placeholder="" required="required" min="0" max="100">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="pry_School" class="mb-2 fw-bold">Primary School (%)</label>
+                            <input class="form-control" type="number" name="pry_School" id="" placeholder="" required="required" min="0"
+                                max="100">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="Sec_School" class="mb-2 fw-bold">Secondary School (%)</label>
+                            <input class="form-control" type="number" name="Sec_School" id="" placeholder="" required="required" min="0"
+                                max="100">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="Water" class="mb-2 fw-bold">Water (%)</label>
+                            <input class="form-control" type="number" name="Water" id="" placeholder="" required="required" min="0" max="100">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="Sanitation" class="mb-2 fw-bold">Sanitation (%)</label>
+                            <input class="form-control" type="number" name="Sanitation" id="" placeholder="" required="required" min="0"
+                                max="100">
+                        </div>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary btn-block mt-4">Predict</button>

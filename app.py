@@ -56,7 +56,7 @@ def predict_api():
     prediction = model.predict(input_df)
     output = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text='Based on the data provided, your literacy rate is {}'.format(output))
+    return render_template('index.html', prediction_text='Based on the data provided, your literacy rate is {}%'.format(output))
 
 if __name__ =="__main__":
     app.run(debug=True)

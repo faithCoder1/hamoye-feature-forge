@@ -10,6 +10,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.country_name {
+    color:#007772;
+}
+
 .header-block {
     position: relative;
     background: linear-gradient(rgba(56, 96, 140, 0.6), rgba(56, 96, 140, 0.6)),
