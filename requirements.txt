@@ -1,0 +1,6 @@
+Flask
+pandas
+numpy
+matplotlib
+scikit-learn==1.2.2
+category_encoders
