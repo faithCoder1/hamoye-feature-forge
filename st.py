@@ -1,16 +1,19 @@
+
 import pickle
 import streamlit as st
 import numpy as np
 import pandas as pd
+import sklearn
+import category_encoders
 from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import OneHotEncoder
+from category_encoders import OneHotEncoder
 import plotly.graph_objects as go
 
 # Load the trained model
 model = pickle.load(open('model_pkl', 'rb'))
 
 # Streamlit UI
-st.title('The Effect of Social Infrastructure and Education on LIteracy Rate')
+st.title('The Effect of Social Infrastructure and Education on Litracy Rate')
 
 st.sidebar.header('To get the Literacy Rate , Select the values below')
 
