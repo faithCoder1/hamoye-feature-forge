@@ -1,5 +1,4 @@
-
-import pickle
+<import pickle
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -13,7 +12,7 @@ import plotly.graph_objects as go
 model = pickle.load(open('model_pkl', 'rb'))
 
 # Streamlit UI
-st.title('The Effect of Social Infrastructure and Education on Litracy Rate')
+st.title('The Effect of Social Infrastructure and Education on LIteracy Rate')
 
 st.sidebar.header('To get the Literacy Rate , Select the values below')
 
@@ -88,8 +87,6 @@ input_data = {
     'Access to improved water (% of population)': [water],
     'Access to improved sanitation (% of population)': [sanitation]
 }
-
-
 # Convert the dictionary to a pandas DataFrame
 input_df = pd.DataFrame(input_data)
 
