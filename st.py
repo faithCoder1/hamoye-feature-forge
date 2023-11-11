@@ -29,7 +29,7 @@ st.write(
 
 # Input form
 country_name = st.sidebar.selectbox('Country Name', [
-    "Nigeria","Liberia", "Burundi", "Lesotho", "Zimbabwe", "Kenya", "Congo, Democratic Republic of", "Swaziland", "Namibia",
+    "Liberia","Nigeria","Burundi", "Lesotho", "Zimbabwe", "Kenya", "Congo, Democratic Republic of", "Swaziland", "Namibia",
     "Rwanda", "Sao Tome and Principe", "Madagascar", "Tanzania", "Malawi", "Ethiopia", "Congo, Republic of",
     "Uganda", "Zambia", "Ghana", "Cameroon", "Mozambique", "Guinea", "Sierra Leone", "Niger", "Mali", "Senegal", "Burkina Faso"
 ])
