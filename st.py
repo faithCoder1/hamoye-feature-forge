@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 model = pickle.load(open('model_pkl', 'rb'))
 
 # Streamlit UI
-st.title('The Effect of Social Infrastructure and Education on LIteracy Rate')
+st.title('Impact of Education and  Infrastructure on Literacy Rate')
 
 st.sidebar.header('To get the Literacy Rate , Select the values below')
 
