@@ -29,9 +29,9 @@ st.write(
 
 # Input form
 country_name = st.sidebar.selectbox('Country Name', [
-    "Liberia", "Burundi", "Lesotho", "Zimbabwe", "Kenya", "Congo, Democratic Republic of", "Swaziland", "Namibia",
+    "Nigeria","Liberia", "Burundi", "Lesotho", "Zimbabwe", "Kenya", "Congo, Democratic Republic of", "Swaziland", "Namibia",
     "Rwanda", "Sao Tome and Principe", "Madagascar", "Tanzania", "Malawi", "Ethiopia", "Congo, Republic of",
-    "Uganda", "Zambia", "Ghana", "Cameroon", "Mozambique", "Nigeria", "Guinea", "Sierra Leone", "Niger", "Mali", "Senegal", "Burkina Faso"
+    "Uganda", "Zambia", "Ghana", "Cameroon", "Mozambique", "Guinea", "Sierra Leone", "Niger", "Mali", "Senegal", "Burkina Faso"
 ])
 
 electricity = st.sidebar.slider('Electricity (%)', min_value=0, max_value=100)
