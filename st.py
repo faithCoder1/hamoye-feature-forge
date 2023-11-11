@@ -22,8 +22,8 @@ st.write(
     but a fundamental skill that empowers individuals to access knowledge, communicate effectively, and participate in the
     socio-economic development of society. Low literacy rates can have profound implications for a society's progress,
     and it is imperative to understand how various factors, including access to electricity, radio, television, primary and
-    secondary school attendance, and improved sanitation and water, can impact literacy rates and educational infrastructure. 
-    We'll explore the problems associated with low literacy rates and the features that can significantly influence literacy and education.
+    secondary school attendance, and improved sanitation and water can impact literacy rates. 
+    We'll explore the problems associated with how social infrastructure and education  can affect litracy rate.
     """
 )
 
@@ -103,4 +103,4 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.write(f'Based on the data provided, your literacy rate is {literacy_rate}.format')
+st.write(f'Based on the data provided, your literacy rate is {literacy_rate}')
